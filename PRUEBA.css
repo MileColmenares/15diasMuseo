@@ -6,6 +6,7 @@ body{
     width: 100%;
     max-width: 1000px;
     margin: auto;
+    overflow-x: auto;
 }
 
 .tableA{
@@ -14,7 +15,7 @@ body{
     border-collapse: collapse;
     margin: 0px;
     padding: 0px;
-    table-layout: fixed;
+    /*table-layout: fixed;*/
 }
 
 .tableA caption{
@@ -40,6 +41,8 @@ body{
     padding: 2px;
     text-align: center;
 }
+
+
 
 .tableA thead th{
     text-transform: uppercase;
