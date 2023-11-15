@@ -5,17 +5,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <style>
         body{
-            background: linear-gradient(45deg, #289e92, #c22a2c);
+            background: linear-gradient(45deg, #a3b48c, #DBCEBD);
             background-repeat: no-repeat;
             height: max
         }
         h1{
-            color: antiquewhite;
+            color: #006400;
             font-style: oblique;
         }
         .btn-custom{
-            background-color: #c22a2c;
-            color: antiquewhite;
+            background-color: #198754;
+            color: #e9ecef;
+            border: 2px solid #006400;
         }
 
         .custom-form {
@@ -26,7 +27,7 @@
         }
 
         .custom-label {
-            color: #c22a2c;
+            color: #006400;
             font-weight: bold;
         }
 
@@ -38,15 +39,33 @@
             width: 100%;
             margin-top: 20px;
             border-collapse: collapse;
-            border: 1px solid #c22a2c;
+            border: 1px solid #006400;
         }
 
         .custom-table th, .custom-table td {
             padding: 10px;
-            border: 2px solid #c22a2c;
+            border: 2px solid #006400;
             text-align: center;
-            color: antiquewhite;
+            color: black;
             font-style: oblique;
+        }
+        button[type="submit"]:hover {
+        background-color: #a3b48c;
+        color:white;    
+        }
+        
+        button[type="button"]:hover {
+        background-color: #a3b48c;
+        color:white;    
+        }
+
+        .botones{
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .botones button {
+            margin-right: 150px;
         }
     </style>
 </head>
@@ -64,28 +83,32 @@
         <div class="form-group">
         <label class="custom-label text-center" for="nombre_serie">Nombre:</label>
         <input class="custom-input" type="text" id="nombre_serie" name="nombre_serie" required><br><br>
-        <!--<label class="custom-label text-center" for="nombre_subserie">Subserie:</label>
-        <input class="custom-input" type="text" id="nombre_subserie" name="nombre_subserie" required><br><br>-->
-        <label for="subserie" class="custom-label text-center">Subserie:</label>
-        <select name="subserie" required><br></br>
+        <label for="nombre_subserie" class="custom-label text-center">Subserie:</label>
+        <select name="nombre_subserie" required><br></br>
             <option value="si">Si</option>
             <option value="no">No</option>
         </select>
         <br></br>
-        <label for="subfondo" class="custom-label text-center">Subfondo:</label>
-        <select name="subfondo" required><br></br>
-            <option value="Legales">Legales</option>
-            <option value="Hacienda">Hacienda</option>
-            <option value="Recursos humanos">Recursos humanos</option>
-            <option value="Seguridad urbana">Seguridad urbana</option>
-            <option value="Prensa, difusión y protocolo">Prensa, difusión y protocolo</option>
-            <option value="Registro civil">Registro civil</option>
-            <option value="Obras públicas y privadas">Obras públicas y privadas</option>
-            <option value="Catastro municipal">Catastro municipal</option>
-            <option value="Cultura y educación">Cultura y educación</option>
-        </select>
+        <label for="nombre_subfondo" class="custom-label text-center">Subfondo:</label>
+        <select id="nombre_subfondo" name="nombre_subfondo" required>
+    
+    <?php
+   //trae los subfondos desde la base
+    include("conexion.php");
+    $sql = "SELECT * FROM subfondo";
+    $result = $datos_bd->query($sql);
 
-        <br></br>
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo '<option value="' . $row["id_subfondo"] . '">' . $row["nombre_subfondo"] . '</option>';    
+        }
+    } else {
+        echo '<option value="">No hay subfondos registrados</option>';
+    }
+    ?>
+</select><br><br>
+
+        
         </div>
         <button type="submit" class="btn btn-custom">Guardar</button>
     </form>
@@ -94,7 +117,7 @@
 <?php
     include("conexion.php");
 
-    $sql = "SELECT * FROM serie";
+    $sql = "SELECT * FROM serie s,subfondo sf WHERE s.id_subfondo=sf.id_subfondo";
     $result = $datos_bd->query($sql);
 
     if ($result->num_rows > 0) {
@@ -108,14 +131,20 @@
     while ($row = $result->fetch_assoc()) {
         echo "<tr>
                 <td>" . $row["nombre_serie"] . "</td> 
-                <td>" . $row["subserie"] . "</td>
-                <td>" . $row["subfondo"] . "</td>
+                <td>" . $row["nombre_subserie"] . "</td>
+                <td>" . $row["nombre_subfondo"] . "</td>
                 </tr>";
     }
 
     // Cerrar la conexión a la base de datos
     mysqli_close($datos_bd);
     ?>
-
+    </table>
+    <br></br>
+    <div class="botones">
+        <a href="modificarDatosSerie.php">
+            <button type="button" class="btn btn-custom">Modificar</button>
+        </a>
+    </div>
 </body>
 </html>
