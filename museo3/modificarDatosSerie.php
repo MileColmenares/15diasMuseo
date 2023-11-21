@@ -76,15 +76,15 @@
 <body>
 
     <br>
-    <h1 class="text-center">Modificar datos de la subserie</h1>
+    <h1 class="text-center">Modificar datos de la serie</h1>
 
     <!--formulario para registrar datos-->
     <div class="container mt-5 custom-form">
-        <form action="actualizarDatosSubserie.php" method="post">
+        <form action="actualizarDatosSerie.php" method="post">
             
             <div class="form-group">
-                <label class="custom-label text-center" for="nombre_subserie">Registro a modificar:</label>
-                <input class="custom-input" type="text" id="nombre_subserie" name="nombre_subserie" required><br><br>
+                <label class="custom-label text-center" for="nombre_serie">Registro a modificar:</label>
+                <input class="custom-input" type="text" id="nombre_serie" name="nombre_serie" required><br><br>
                 <label class="custom-label text-center">Nuevo Valor:</label>
                 <input class="custom-input" type="text" name="nuevo_valor" required>
 

@@ -2,12 +2,15 @@
 <html>
 <head>
     <title>Ingresar Sub serie</title>
+    <link rel="icon" href="logo.jpg" type="logo.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <style>
+        html,
         body{
             background: linear-gradient(45deg, #a3b48c, #DBCEBD);
             background-repeat: no-repeat;
-            height: max
+            height: 100%;
+            margin: 0;    
         }
         h1{
             color: #006400;
@@ -66,7 +69,7 @@
         }
 
         .botones button {
-            margin-right: 150px;
+            margin-right: 50px;
         }
     </style>
 </head>
@@ -139,6 +142,10 @@
     <div class="botones">
         <a href="modificarDatosSubserie.php">
             <button type="button" class="btn btn-custom">Modificar</button>
+        </a>
+
+        <a href="eliminarSubserie.php">
+            <button type="button" class="btn btn-custom">Eliminar</button>
         </a>
     </div>
 </body>

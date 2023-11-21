@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Modificar datos</title>
+    <title>Eliminar datos</title>
     <link rel="icon" href="logo.jpg" type="logo.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <style>
         html,
-        body{
-            background: linear-gradient(45deg, #a3b48c, #DBCEBD);
-            background-repeat: no-repeat;
+        body {
             height: 100%;
             margin: 0;
+            background: linear-gradient(45deg, #a3b48c, #DBCEBD);
+            background-repeat: no-repeat;
         }
-        h1{
+
+        h1 {
             color: #006400;
             font-style: oblique;
         }
-        .btn-custom{
+
+        .btn-custom {
             background-color: #198754;
             color: #e9ecef;
             border: 2px solid #006400;
-
         }
 
         .custom-form {
@@ -46,24 +47,26 @@
             border: 1px solid #006400;
         }
 
-        .custom-table th, .custom-table td {
+        .custom-table th,
+        .custom-table td {
             padding: 10px;
             border: 2px solid #006400;
             text-align: center;
             color: black;
             font-style: oblique;
         }
+
         button[type="submit"]:hover {
             background-color: #a3b48c;
-            color:white;
+            color: white;
         }
 
         button[type="button"]:hover {
             background-color: #a3b48c;
-            color:white;
+            color: white;
         }
 
-        .botones{
+        .botones {
             text-align: right;
             margin-top: 20px;
         }
@@ -76,25 +79,18 @@
 <body>
 
     <br>
-    <h1 class="text-center">Modificar datos de la subserie</h1>
+    <h1 class="text-center">Eliminar datos de la Serie</h1>
 
-    <!--formulario para registrar datos-->
+    <!--formulario para eliminar datos-->
     <div class="container mt-5 custom-form">
-        <form action="actualizarDatosSubserie.php" method="post">
+        <form action="deleteSerie.php" method="get">
             
             <div class="form-group">
-                <label class="custom-label text-center" for="nombre_subserie">Registro a modificar:</label>
-                <input class="custom-input" type="text" id="nombre_subserie" name="nombre_subserie" required><br><br>
-                <label class="custom-label text-center">Nuevo Valor:</label>
-                <input class="custom-input" type="text" name="nuevo_valor" required>
-
-                </select><br><br>
-
-            </div>
-            <button type="submit" class="btn btn-custom" value="Actualizar">Actualizar</button>
+                <label class="custom-label text-center" for="nombre_serie">Nombre del Registro a Eliminar:</label>
+                <input class="custom-input" type="text" name="nombre_serie" required><br><br>
+            <button type="submit" class="btn btn-custom" value="Eliminar">Eliminar</button>
         </form>
     </div>
-    <br><br>
 
     
 </body>

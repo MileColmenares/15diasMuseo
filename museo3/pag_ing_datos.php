@@ -11,10 +11,10 @@
     <div class="login-container">
         <h1>¿Que datos desea ingresar?</h1>
         <!--<div class="button">-->
-            <a href="registrarSerie.php" type="button">Ingresar Serie</a>
-            <a href="registrarSubserie.php" type="button">Ingresar Subserie</a>
             <a href="registrarFondo.php" type="button">Ingresar Fondo</a>
             <a href="registrarSubfondo.php" type="button">Ingresar Subfondo</a>
+            <a href="registrarSerie.php" type="button">Ingresar Serie</a>
+            <a href="registrarSubserie.php" type="button">Ingresar Subserie</a>
             <a href="login.php" type="button">Ingresar unidad documental</a>        
     </div>
 </body>
