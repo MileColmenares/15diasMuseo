@@ -1,7 +1,6 @@
 
 <head>
-<link rel="stylesheet" type="text/css" href="">
-<link rel="stylesheet" type="text/css" href="css/PRUEBA.css">
+<link rel="stylesheet" type="text/css" href="css/mostrarMass.css">
 </head>
 
     <?php
@@ -9,7 +8,7 @@
     include("header.php");
     include ("buscador.php");
     // obtener datos
-    $sql = "SELECT * FROM unidad_documental1 WHERE id_documento";
+    $sql =  "SELECT * FROM unidad_documental1 WHERE id_documento";
     $result = $datos_bd->query($sql);
     if ($result->num_rows > 0) {
         echo "<div class'containerQ'>";
