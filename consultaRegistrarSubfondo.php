@@ -13,7 +13,7 @@
 //si se pueden ingresar, deriva a la pagina principal
 
     if ($datos_bd->query($sql) === TRUE) {
-        header("location:index.php");
+        header("location:registrarSubfondo.php");
     } else {
         echo "Error al insertar el subfondo: " . $datos_bd->error;
     }
