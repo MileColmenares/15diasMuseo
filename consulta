@@ -1,0 +1,11 @@
+"SELECT unidad_documental1.id_documento, unidad_documental1.nombre_documento, unidad_documental1.fecha_inicio, unidad_documental1.fecha_final, unidad_documental1.ubicacion, unidad_documental1.volumen_soporte, unidad_documental1.nombre_productor, unidad_documental1.nombre_creador, unidad_documental1.forma_ingreso, unidad_documental1.descripcion, unidad_documental1.estado_conservacion, unidad_documental1.condicion_acceso, unidad_documental1.condicion_reproduccion, unidad_documental1.documentos_relacionados, unidad_documental1.notas, unidad_documental1.fecha_registro, unidad_documental1.resp_registro, unidad_documental1.resp_control,
+            fondo.nombre_fondo, 
+            subfondo.nombre_subfondo, 
+            serie.nombre_serie, 
+            subserie.nombre_subserie 
+    FROM unidad_documental1
+    LEFT JOIN fondo ON unidad_documental1.id_fondo = fondo.id_fondo
+    LEFT JOIN subfondo ON unidad_documental1.id_subfondo = subfondo.id_subfondo
+    LEFT JOIN serie ON unidad_documental1.id_serie = serie.id_serie
+    LEFT JOIN subserie ON unidad_documental1.id_subserie = subserie.id_subserie
+    WHERE id_documento = $id"
