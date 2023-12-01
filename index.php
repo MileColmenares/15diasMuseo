@@ -9,17 +9,22 @@
     <title>Página principal</title>
     <style>
         body{
-            background: linear-gradient(45deg, #289e92, #c22a2c);
+            background: linear-gradient(45deg, #5a783c, #a3b48c, #DBCEBD,#f1eae1);
             background-repeat: no-repeat;
             height: 100vh
         }
         h1{
-            color: antiquewhite;
+            color: #228051;
             font-style: oblique;
         }
         .btn-custom{
-            background-color: #c22a2c;
-            color: antiquewhite;
+            background-color:#228051;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
     </style>
 </head>
@@ -56,3 +61,6 @@ include("header.php");
     </div>
 </body>
 </html>
+<?php
+include("footer.php");
+?>
