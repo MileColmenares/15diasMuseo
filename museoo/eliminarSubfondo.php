@@ -12,7 +12,7 @@
         body {
             height: 100%;
             margin: 0;
-            background: linear-gradient(45deg, #a3b48c, #DBCEBD);
+            background: linear-gradient(45deg, #a1b489, #dbcdbc);
             background-repeat: no-repeat;
         }
 
@@ -60,13 +60,13 @@
         }
 
         button[type="submit"]:hover {
-            background-color: #a3b48c;
-            color: white;
+            background-color: #fdf16f;
+            color: #353535;
         }
 
         button[type="button"]:hover {
-            background-color: #a3b48c;
-            color: white;
+            background-color: #fdf16f;
+            color: #353535;
         }
 
         .botones {

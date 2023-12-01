@@ -55,13 +55,13 @@
         }
 
         button[type="submit"]:hover {
-            background-color: #a3b48c;
-            color:white;    
+            background-color: #fdf16f;
+            color:#353535;    
         }
 
         button[type="button"]:hover {
-            background-color: #a3b48c;
-            color:white;    
+            background-color: #fdf16f;
+            color:#353535;    
         }
 
         .botones{
@@ -73,44 +73,6 @@
         .botones button {
             margin-right: 50px;
         }
-
-        header {
-            background-color:#a3b48c; /* Cambia el último valor para ajustar la opacidad */
-            /*background: linear-gradient(45deg, #5a783c, #a3b48c, #DBCEBD, #f1eae1);*/
-            display: flex;
-            align-items: center;
-            border-radius: 50px;
-        }
-
-        .logo {
-            flex: 1;
-            height: 100%;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            max-height: 100%;
-            width: 30%;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #3498db;
-            font-size: 16px;
-        }
-
 
     </style>
 </head>

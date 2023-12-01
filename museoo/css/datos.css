@@ -3,7 +3,7 @@ body {
     background: linear-gradient(45deg, #5a783c, #a3b48c, #DBCEBD,#f1eae1);    
     margin: 0;
     padding: 0;
-    display: flex;
+    
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -17,6 +17,7 @@ body {
     width: 400px;
     height: 360px;
     text-align: center;
+    margin-left: 36%;
 }
 
 h1 {
@@ -53,6 +54,7 @@ a[type="button"] {
 }
 
 a[type="button"]:hover {
-    background-color: #a3b48c;
+    background-color: #fdf16f;
+    color: #353535;
 }
 

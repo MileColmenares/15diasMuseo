@@ -7,8 +7,9 @@
     
     <!--estilo de la pagina-->
     <style>
+        html,
         body{
-            background: linear-gradient(45deg, #a3b48c, #DBCEBD);
+            background: linear-gradient(45deg, #a1b489, #dbcdbc);
             background-repeat: repeat;
             height: 100%;
             margin: 0;    
@@ -55,13 +56,13 @@
             font-style: oblique;
         }
         button[type="submit"]:hover {
-            background-color: #a3b48c;
-            color:white;
+            background-color: #fdf16f;
+            color:#353535;
         }
 
         button[type="button"]:hover {
-            background-color: #a3b48c;
-            color:white;
+            background-color: #fdf16f;
+            color:#353535;
         }
 
         .botones{
